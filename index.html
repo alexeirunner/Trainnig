@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#222222" />
+    <meta name="description" content="PWA для расчёта тренировочного сплита" />
+    <link rel="manifest" href="./public/manifest.json" />
+    <link rel="icon" href="./public/icon-192.png" />
+    <title>Тренировочный сплит (PWA)</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- React via CDN -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <!-- App -->
+    <script type="module" src="./src/app.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./src/service-worker.js');
+        });
+      }
+    </script>
+  </body>
+</html>
