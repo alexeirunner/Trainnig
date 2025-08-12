@@ -1,4 +1,4 @@
-const CACHE_NAME = 'trainnig-pwa-v2';
+const CACHE_NAME = 'trainnig-pwa-v3';
 const ASSETS = [
   './',
   './index.html',
