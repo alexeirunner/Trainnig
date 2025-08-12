@@ -4,25 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#222222" />
-  <meta name="description" content="PWA для тренировки тренирочного сплита" />
+  <meta name="description" content="PWA для тренирочного сплита" />
 
-  <link rel="manifest" href="./manifest.webmanifest" />
-  <!-- Иконки подключим позже; PWA будет работать и без них -->
+  <link rel="manifest" href="./manifest.json" />
 
   <title>Тренировочный сплит (PWA)</title>
-  <link rel="stylesheet" href="./src/styles.css" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <div id="root"></div>
 
-  <!-- React 18 через CDN (UMD) -->
+  <!-- React 18 через CDN -->
   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
-  <!-- Приложение -->
-  <script src="./src/app.js"></script>
+  <!-- ТВОЙ код -->
+  <script src="./app.js"></script>
 
-  <!-- Регистрация Service Worker -->
+  <!-- Регистрация SW -->
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -32,4 +31,3 @@
   </script>
 </body>
 </html>
-
